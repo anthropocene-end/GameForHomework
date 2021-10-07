@@ -41,7 +41,7 @@ What do you do?""")
 
         choice = input("==> ").lower()
         dies = ["run", "fight", "challenge"]
-        passed = ["talk", "ask"]
+        passed = ["talk", "ask", "wave"]
 
         if any(x in choice for x in dies):
             print("The guard stabs you and you die. Game over.")
@@ -87,8 +87,8 @@ def lake():
     choice = input("==> ").lower()
 
     if "around" in choice:
-        print("You trip on an crocydile and get eaten. Sorry.")
-        # dead("You trip on an crocydile and get eaten. Sorry.")
+        print("You trip on an crocodile and get eaten. Sorry.")
+        # dead("You trip on an crocodile and get eaten. Sorry.")
     elif "cross" in choice:
         print("You're about half way across when a mermaid appears.")
         print("She asks you if you want to hear a song.")
