@@ -22,6 +22,43 @@ def riddle():
     else:
         print("Oh, too bad. Wrong answer. She kicks you out. Game over.")
         # dead("Oh, too bad. Wrong answer. She kicks you out. Game over.")
+def wrestle():
+    strength = random.randint(0,100)
+    print("You and the guard have a nice conversation.")
+    print ("He answers many of your questions, and tells you the history of his people. ")
+    print("You become fast friends and he wants to arm wrestle you.")
+    print("You know elves are stronger than they look, but it's all in the name of fun, right?\n")
+    print("Choose 1: \"No! That sounds humiliating!\"")
+    print("       2: \"I've always wanted to arm wrestle an elf. Let's do it!\"")
+
+    choice = input("==>")
+
+    if choice == "1":
+        print("You hang for a little longer, then the elf says you must leave before his watch is over. ")
+        print("You take the hint and return to the base of the tree,")
+        print("feeling somehow like you've lost the guards respect")
+        print("....like you've missed an opportunity. ")
+        print("Alas, you return to your original errand,")
+        print("to visit your elderly auntie in the next village over. ")
+        exit()
+    else:
+        print("You must beat his strength of 74")
+        print(f"You roll a {strength}")
+    if strength <= 10:
+        print("You hang for a little longer, then the elf says you must leave before his watch is over. ")
+        print("You take the hint and return to the base of the tree,")
+        print("feeling somehow like you've lost the guards respect")
+        print("....like you've missed an opportunity. ")
+        print("Alas, you return to your original errand,")
+        print("to visit your elderly auntie in the next village over. ")
+        exit()
+    elif strength in range(11, 76):
+        print("Lets relax a bit and try again")
+        # strength = random.randint(0,100)
+        wrestle()
+    else:
+        print("Wow, you have amazing strength. Come with me, I want to introduce you to someone.")
+
 def elf():
     print("You see stairs built into a tree. Do you procees up the stairs?")
 
@@ -48,7 +85,6 @@ What do you do?""")
 
         elif any(x in choice for x in passed):
             riddle()
-
 
         else:
             print("I don't understand. Try again")
